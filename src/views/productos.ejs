@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head  -->
+
+<%- include('partials/headLinks') %>
+
+    <link rel="stylesheet" href="/css/style-producto.css">
+
+
+    <body>
+        <!-- headerMain y headerSidebar-->
+        <%- include('partials/header') %>
+
+
+            <!-- Main -->
+
+            <main>
+
+                <h1 class="titulo-productos">NUESTRAS GUARDERIAS</h1>
+
+                <section class="articulos">
+
+                    <% daycares.forEach(daycare=> { %>
+
+
+                            <div class="cuerpo-detalle">
+
+                                <div class="centrado">
+                                    <img src="/img/guarderias/<%= daycare.image %> " alt="guarderia1"
+                                        class="imagenGuarderia">
+                                </div>
+                                <div class="nombre-guarderia">Guarderia <%= daycare.name %></div>
+                                <div class="precios">$<%= daycare.price %></div>
+                                <div class="estrellas">
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+
+                                <h3>Características</h3>
+                                <p>
+                                    <%= daycare.characteristics %>
+                                </p>
+                                <h3>Instalaciones</h3>
+                                <p>
+                                    <%= daycare.facilities %>
+                                </p>
+                                <h3>Categoria</h3>
+                                <p>
+                                    <%= daycare.category_id %>
+                                </p>
+
+                                <div class="reservar" strong>
+                                    <a href="/productos/detalle-producto/<%= daycare.id  %>">Ver Guarderia</a></strong>
+                                    <i class="fas fa-paw huellita-reserva"></i>
+                                </div>
+
+
+                            </div>
+
+
+
+                        <% }) %>
+
+
+                </section>
+
+            </main>
+
+            <!-- Footer -->
+            <%- include('partials/footer') %>
+
+
+    </body>
+
+</html>

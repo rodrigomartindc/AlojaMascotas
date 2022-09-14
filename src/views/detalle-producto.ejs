@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head  -->
+
+<%- include('partials/headLinks') %>
+
+    <link rel="stylesheet" href="/css/style-detalle-producto.css">
+
+
+
+    <body>
+        <!-- headerMain y headerSidebar-->
+        <%- include('partials/header') %>
+
+
+            <!-- Main -->
+
+            <main>
+                <div class="boton-volver-home">
+                    <a href="/productos/productos"><i class="far fa-arrow-alt-circle-left"></i> VOLVER</a>
+                </div>
+
+                <section class="detalleproducto">
+                    <div class=imagenprod><img src="/img/guarderias/<%= daycare.image %> " alt="guarderia1"
+                            class="imagen1"></div>
+                    <div>
+                        <div class="nombre-guarderia">Guarderia <%= daycare.name %>
+                        </div>
+                        <div class="subtituloguarderia">
+                            <div class="precios">$<%= daycare.price %>
+                            </div>
+                            <div class="estrellas">
+                                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="cuerpo-detalle">
+
+                            <h3>Características</h3>
+                            <p>
+                                <%= daycare.characteristics %>
+                            </p>
+                            <h3>Instalaciones</h3>
+                            <p>
+                                <%= daycare.facilities %>
+                            </p>
+
+                        </div>
+                    </div>
+                </section>
+
+                <div class="acciones-detalle-producto">
+                    <div class="reservar" strong>
+                        <a class="a-boton" href="#">Reservar</a></strong>
+                        <i class="fas fa-paw huellita-reserva"></i>
+                    </div>
+
+                    <div class="editar-producto" strong>
+                        <a class="a-boton" href="/productos/editar-producto/<%= daycare.id %>">Editar producto</a></strong>
+                        <i class="fas fa-paw huellita-reserva"></i>
+                    </div>
+
+                    <div class="crear-producto" strong>
+                        <a class="a-boton" href="/productos/crear-producto">Crear Producto</a></strong>
+                        <i class="fas fa-paw huellita-reserva"></i>
+                    </div>
+
+                    <div class="eliminar-producto" strong>
+                        <form method="POST" action="/productos/eliminar-producto/<%= daycare.id %>/?_method=DELETE">
+
+                            <button class="boton-eliminar a-boton" type="submit">Eliminar Producto</strong>
+                            </button>
+                            <i class="fas fa-paw huellita-reserva"></i>
+                        </form>
+                    </div>
+                </div>
+
+
+                </section>
+
+            </main>
+
+            <!-- Footer -->
+            <%- include('partials/footer') %>
+
+    </body>
+
+</html>

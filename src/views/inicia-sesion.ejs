@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head  -->
+
+<%- include('partials/headLinks') %>
+
+<link rel="stylesheet" href="/css/style-inicia-sesion.css">
+
+
+    <body>
+        <!-- headerMain y headerSidebar -->
+        <%- include('partials/header') %>
+
+                <main>
+
+                    <div class="boton-volver-home">
+                        <a href="/"><i class="far fa-arrow-alt-circle-left"></i> VOLVER</a>
+                    </div>
+
+                    <h3 class="titulo-iniciar-sesion">INICIA SESION</h3>
+
+                    <div class="contenedor-iniciar-sesion">
+                        <ul class="errores"></ul>
+                        <form action="/users/inicia-sesion" method="POST" class="formLogin">
+                            <div>
+                                <label class="label-email">CORREO ELECTRONICO:</label>
+                                <input class="input-datos" type="email" name="email" id="email">
+                            </div>
+
+                            <div>
+                                <label>CONTRASEÑA:</label>
+                                <input class="input-datos" type="password" name="password" id="password">
+                            </div>
+                            <% if (locals.errors && errors.email) { %>
+                             <div style="color: red;">
+                                 <%= errors.email.msg %>
+                             </div>
+                            <% } %>
+                            <div class="contanedor-guardar-clave">
+                                <label class="input-guardar-clave">
+                                    <input type="checkbox" name="guardar-clave" value="guardar-clave" checked>
+                                    Guardar contraseña
+                                </label>
+                            </div>
+
+                            <div>
+                                <button type="submit" name="iniciar-sesion">INICIAR SESIÓN</button>
+                            </div>
+                        </form>
+
+                        <a class="boton-crear-cuenta" href="/users/registro">CREAR CUENTA</a>
+
+                        <div class="contenedor-olvidaste-contraseña">
+                            <a class="Olvidaste-contraseña" href="#">¿Has olvidado tu contraseña?</a>
+                        </div>
+
+                    </div>
+
+                </main>
+
+
+                <!-- Footer -->
+                <%- include('partials/footer') %>
+                <script src="/js/login.js"></script>
+    </body>
+
+</html>

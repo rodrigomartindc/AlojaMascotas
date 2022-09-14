@@ -1,0 +1,339 @@
+:root {
+      --verde-oscuro: #3f4e4a;
+      --verde-claro: #3f7552;
+      --celeste-oscuro: #9fb7bc;
+      --celeste-claro: #c7dae0;
+      --gris-claro: #e0e7eb;
+    }
+
+    .boton-volver-home {
+      padding: 20px;
+    }
+    
+    .boton-volver-home a{
+      text-decoration: none;
+      color: grey;
+    }
+
+
+    /* Fondos */
+
+.producto1,
+.producto3 {
+      background-color: rgba(201, 201, 201, 0.103);
+      margin: 15px 0px;
+}
+
+/* Flex por articulo */
+
+.producto1,
+.producto2 {
+      display: flex;
+}
+
+/* Flex de cada Producto */
+
+.info-producto {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 40vw;
+      padding: 0px;
+}
+
+
+
+.detalle-producto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 200px;
+
+}
+
+.prodcol1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80vw;
+      
+}
+
+.resumen-producto {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 40vw;
+      max-width: 200px;
+      max-height: 300px;
+      padding: 15px;
+      margin: 5px;
+      background-color: var(--gris-claro);
+      border-radius: 4px;
+}
+
+/* Info - Producto */
+
+.resumen-cart-productos img {
+            object-fit: cover;
+            width: 30vw;
+            padding: 1px;
+            border-radius: 5px;
+            border-right: 2px solid rgba(201, 201, 201, 0.20);
+            border-bottom: 2px solid rgba(201, 201, 201, 0.20);           
+}
+img{
+      display: block;
+      margin: 0px auto;
+     }
+
+.titulo-producto {
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--verde-oscuro);
+      text-align:center;
+}
+
+.descripcion-producto {
+      font-size: 13px;
+      text-align: center;
+      color: var(--verde-oscuro)
+}
+
+/* Resumen - Producto */
+
+
+ .titulo-categoria{
+      font-size: 13px;
+      color: var(--verde-oscuro)
+}
+
+.opciones-categoria {
+      font-size: 12px;
+      padding: 5px;
+      color: var(--verde-oscuro)      
+}
+
+.fechas-producto {
+      display: flex;
+      flex-direction: column;
+      margin: 5px 0;
+}
+
+.fechas-producto input {
+      font-size: 12px;
+      color: var(--verde-oscuro);
+}
+
+.fechas-producto label {
+      padding: 5px 0;
+      font-size: 12px;
+      color: var(--verde-oscuro)
+}
+
+.cantidad .mascota {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin: 10px 0;
+}
+
+.cantidad .fa-dog,
+.cantidad .fa-cat {
+      font-size: 18px;
+      text-align: center;
+      color: var(--verde-oscuro);
+      width: 24px;
+      height: 24px;
+      background-color: white;
+      border-radius: 30%;
+      border: solid 1px var(--verde-oscuro);
+      padding-top: 2px;
+      margin-right: 5px;
+      
+}
+
+.cantidad .fa-plus,
+.cantidad .fa-minus {
+      font-size: 14px;
+      background-color: var(--celeste-claro);
+      border: solid 1px var(--celeste-claro);
+      border-radius: 50%;
+      color: white;
+}
+
+.cantidad div{
+      font-family: sans-serif;
+      font-size: 12px;
+}
+
+.resumen-tot-det {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+}
+
+.precio {
+      /* position: absolute;
+      bottom: 35px;
+      right: 15px; */
+      font-size: 12px;
+      padding: 4px;
+      margin: 5px 0;
+      border-bottom: solid 1px var(--celeste-oscuro);
+    
+}
+/* 
+.remover {
+      position: absolute;
+      bottom: 10px;
+      right: 5px;
+      text-align: center;
+      margin-top: 8px;
+      padding: 2px;
+      font-size: 12px;
+      background-color: var(--celeste-oscuro);
+      border-radius: 2px;
+} */
+
+.fa-trash-alt{
+      margin-left: 25px;
+}
+
+
+/* Seccion - Codigo descuento */
+
+.codigo-descuento {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: px;
+      background-color:rgba(201, 201, 201, 0.20)
+}
+
+.titulo-descuento {
+      font-size: 13px;
+      color: var(--verde-oscuro);
+      margin: 15px 0 40px 20px;
+}
+
+.input-descuento input {
+      margin-top: 20px;
+      margin-right: 10px;
+
+}
+
+.input-descuento button {
+      position: absolute;
+      bottom: 4px;
+      right: 10px;
+      padding: 2px;
+      background-color: var(--celeste-claro);
+      color: white;
+      border-style: none;
+      border-radius: 3px;
+
+}
+
+/* Comentario */
+
+.comentario {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10px 20px 20px;
+      background-color: rgba(170, 180, 189, 0.3)
+}
+
+.titulo-comentario {
+      font-size: 13px;
+      color: var(--verde-oscuro)
+}
+
+.comentario textarea {
+      font-size: 11px;
+      width: 60vw;
+      height: 3rem;
+      padding: 2px;
+}
+
+/* Seccion Total */
+
+
+.resumen-cart-total {
+      position: sticky;
+      z-index: 999;
+      bottom: -5px;
+      background-color: rgb(245, 245, 245);
+      border-top: 1px var(--verde-oscuro) solid;
+      border-bottom: 0px var(--verde-oscuro) solid;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px 5px 10px;
+      /* margin-bottom:50px; */
+}
+
+.subtotal, .impuestos-tasas,
+.descuento, .total {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-inline: 30px;
+}
+
+.subtotal, .impuestos-tasas {
+      font-size: 12px;
+}
+
+.descuento {
+      font-size: 14px;
+}
+
+.total {
+      font-size: 14px;
+}
+
+.finalizar-compra {
+      display: flex;
+      justify-content: center;
+      padding: 0 10px 0 10px;
+}
+
+.finalizar-compra button {
+      padding: 2px;
+      font-size: 12px;
+      border-radius: 5px;
+      border-style:solid;
+      border-color:transparent;
+      color: var(--verde-oscuro);
+      background-color: var(--celeste-claro);
+}
+
+p {
+      margin-bottom: 0;
+}
+    
+@media(min-width:760px){
+
+      .prodcol1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+      }
+
+      .info-producto img{
+            max-width: 70%;
+      }
+     
+
+}
